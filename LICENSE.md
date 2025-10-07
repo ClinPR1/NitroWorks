@@ -1,0 +1,69 @@
+# LICENCIA PROPIETARIA — NitroWorks
+
+**Última actualización:** 6 de octubre de 2025  
+**Titular:** ClinPR (usuario de GitHub: ClinPR1)
+
+---
+
+## 1. Objeto
+
+Esta licencia regula el uso, acceso y derechos sobre el repositorio y la página web denominada **NitroWorks** (el “Repositorio”), incluyendo, sin limitarse a: código fuente, archivos HTML/CSS/JS, imágenes, diseños, assets, documentación y cualquier otro material relacionado.
+
+---
+
+## 2. Derechos reservados
+
+Todos los derechos sobre el Repositorio y su contenido son propiedad exclusiva de **ClinPR**. Queda **terminantemente prohibido**, sin autorización expresa por escrito del titular:
+
+- Descargar, copiar, reproducir, duplicar o almacenar total o parcialmente el contenido del Repositorio.  
+- Modificar, adaptar, traducir, alterar o crear obras derivadas del contenido.  
+- Distribuir, sublicenciar, vender, alquilar o ceder el contenido a terceros.  
+- Usar el contenido para fines comerciales o en proyectos propios o ajenos.  
+- Realizar ingeniería inversa, descompilar o desensamblar cualquier componente del Repositorio.  
+- Usar el nombre “NitroWorks” o cualquier marca asociada sin permiso del titular.
+
+---
+
+## 3. Permisos limitados
+
+El acceso al Repositorio y a la página web se concede **únicamente para visualización y uso de los recursos que la propia página ofrece para descarga**. Cualquier otro uso requiere autorización expresa, por escrito, de **ClinPR**.
+
+---
+
+## 4. Obligaciones del usuario
+
+El usuario se compromete a respetar íntegramente esta licencia y **no intentar eludir las restricciones técnicas o legales** que protegen el contenido.
+
+---
+
+## 5. Medidas y sanciones
+
+El incumplimiento de esta licencia facultará a **ClinPR** a exigir la **cesación inmediata de la actividad infractora** y a reclamar las acciones legales pertinentes, incluyendo indemnizaciones y costas judiciales.
+
+---
+
+## 6. Exención de garantías
+
+El Repositorio y la página web se suministran “**tal cual**” y sin garantías de ningún tipo. **ClinPR** no será responsable por daños directos o indirectos derivados del acceso o uso del Repositorio o del sitio web.
+
+---
+
+## 7. Duración y terminación
+
+Esta licencia permanecerá vigente mientras exista acceso al Repositorio y la página web. **ClinPR** puede revocar permisos y denegar acceso en cualquier momento. La terminación por incumplimiento no exime de responsabilidad por actos cometidos previamente.
+
+---
+
+## 8. Ley aplicable y jurisdicción
+
+Esta licencia se rige por las leyes de la **República Argentina**. Para cualquier conflicto, las partes se someten a los tribunales competentes de la **Ciudad Autónoma de Buenos Aires**, con renuncia a cualquier otro fuero.
+
+---
+
+## 9. Contacto para autorizaciones
+
+Para solicitar permisos o aclaraciones, contactar con **ClinPR** a través del canal de Discord: [https://discord.gg/pdeeGJTZyD](https://discord.gg/pdeeGJTZyD)
+
+---
+
+**Aceptación:** El acceso continuado al Repositorio o a la página web implica aceptación total de esta licencia.
