@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NitroWorks — DragHub</title>
+  <link rel="icon" type="image/png" href="icon.png" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#e11d48;--btn-purple:#7c3aed}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%, #07192b 100%);}
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#111827,#0ea5a4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{color:var(--muted);margin-left:18px;text-decoration:none}
+    .hero{display:flex;gap:28px;align-items:center;margin-top:28px;background:rgba(255,255,255,0.02);padding:22px;border-radius:12px}
+    .hero-left{flex:1}
+    .hero h1{margin:0;font-size:34px}
+    .hero p{color:var(--muted);margin:8px 0 16px}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:20px}
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 4px 18px rgba(2,6,23,0.6)}
+    .thumb{height:140px;border-radius:8px;overflow:hidden;margin-bottom:10px}
+    .thumb img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+    .meta{display:flex;justify-content:space-between;align-items:center}
+    .meta small{color:var(--muted)}
+    .actions{margin-top:10px;display:flex;gap:8px}
+    .btn{flex:1;padding:8px;border-radius:8px;text-align:center;text-decoration:none;font-weight:600;color:white}
+    .btn-download{background:var(--btn-purple)}
+    .btn-details{background:white;color:black}
+    .badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    .search-bar{margin-top:20px;display:flex}
+    .search-bar input{flex:1;padding:8px;border-radius:0;border:none;font-size:14px;background:rgba(255,255,255,0.05);color:white;outline:none}
+    .search-bar input::placeholder{color:var(--muted)}
+    @media (max-width:640px){.hero{flex-direction:column;align-items:flex-start}.hero h1{font-size:26px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NW</div>
+        <div>
+          <div style="font-weight:700;font-size:16px">NitroWorks</div>
+          <div style="font-size:12px;color:var(--muted)">Mods de autos completos y drag setups</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#mods">Mods</a>
+        <a href="https://discord.gg/pdeeGJTZyD" target="_blank">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Centro de mods — NitroWorks</h1>
+        <p>Encuentra vehículos, piezas, mapas y utilidades hechas por la comunidad para BeamNG.drive. Descargas directas y listados ordenados.</p>
+        <a class="cta" href="#mods" id="exploreBtn">Explorar mods</a>
+      </div>
+      <div style="width:320px">
+        <div class="thumb"><img src="icon.png" alt="Banner NitroWorks"></div>
+      </div>
+    </section>
+
+    <section id="mods">
+      <h2 style="margin-top:18px">Destacados</h2>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar mods..." onkeyup="filterMods()" />
+      </div>
+      <div class="grid" id="modsGrid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="thumb"><img src="ej25/ej25.png" alt="Toyota F4D"></div>
+          <h3 style="margin:6px 0">AutoBello DragSetups EJ25, WheelieBar, Etc.</h3>
+          <div class="meta"><small>Autor: ClinPR</small><div class="badge">v1.0.0</div></div>
+          <p style="color:var(--muted);margin:8px 0 0;font-size:14px">Kit completo para drag racing: turbo grande, wheelie bar y ajustes de motor optimizados.</p>
+          <div class="actions">
+            <a class="btn btn-download" href="https://modsfire.com/" target="_blank">Descargar</a>
+            <a class="btn btn-details" href="ej25/ej25.html">Detalles</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>© NitroWorks — Mods Drag racing para BeamNG. Comunidad y recursos no oficiales. Si quieres publicar un mod, súbelo al canal NitroWorks de nuestro Discord: <a href="https://discord.gg/pdeeGJTZyD" target="_blank" style="color:var(--muted)">SpookHub</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function filterMods() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const mods = document.querySelectorAll('#modsGrid .card');
+      mods.forEach(mod => {
+        const text = mod.textContent.toLowerCase();
+        mod.style.display = text.includes(input) ? '' : 'none';
+      });
+    }
+
+    // Función para botón "Explorar mods" que lleva a un mod aleatorio
+    const exploreBtn = document.getElementById('exploreBtn');
+    const modLinks = [
+      'ej25/ej25.html',
+      // si agregas más mods, pon la ruta de sus detalles aquí
+    ];
+
+    exploreBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const randomIndex = Math.floor(Math.random() * modLinks.length);
+      window.location.href = modLinks[randomIndex];
+    });
+  </script>
+</body>
+</html>
