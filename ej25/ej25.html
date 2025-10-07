@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoBello EJ25 — NitroWorks</title>
+  <link rel="icon" type="image/png" href="../icon.png" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#e11d48;--btn-purple:#7c3aed}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%, #07192b 100%);}
+    .container{max-width:900px;margin:32px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#111827,#0ea5a4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{color:var(--muted);margin-left:18px;text-decoration:none}
+    .mod-header{display:flex;gap:28px;align-items:center;margin-top:28px;background:rgba(255,255,255,0.02);padding:22px;border-radius:12px}
+    .mod-info{flex:1}
+    .mod-info h1{margin:0;font-size:32px}
+    .mod-info p{color:var(--muted);margin:8px 0 16px}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .thumb{height:200px;border-radius:10px;overflow:hidden;margin-bottom:14px}
+    .thumb img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+    .section{margin-top:28px}
+    .section h2{font-size:22px;margin-bottom:12px}
+    .details{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 4px 18px rgba(2,6,23,0.6)}
+    .details p{color:var(--muted);margin:6px 0}
+    .details ul{margin:6px 0 0 16px; color:var(--muted)}
+    .details li{margin-bottom:6px}
+    .actions{margin-top:16px;display:flex;gap:12px}
+    .btn{flex:1;padding:10px;border-radius:8px;text-align:center;text-decoration:none;font-weight:600;color:white}
+    .btn-download{background:var(--btn-purple)}
+    .btn-back{background:rgba(255,255,255,0.08);color:white}
+    footer{margin-top:32px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Galería optimizada */
+    .mod-gallery { margin-top:28px; }
+    .gallery-main img { width: 100%; max-height: 450px; object-fit: cover; border-radius: 12px; cursor: pointer; }
+    .gallery-thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .gallery-thumbs img { width: 70px; height: 70px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: 0.2s; border: 2px solid transparent; }
+    .gallery-thumbs img:hover, .gallery-thumbs img.active { border-color: var(--accent); }
+
+    /* Lightbox */
+    .lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999; }
+    .lightbox img { max-width:90%; max-height:90%; border-radius:12px; }
+    .lightbox .close, .lightbox .prev, .lightbox .next {
+      position:absolute; top:50%; transform:translateY(-50%); color:white; font-size:30px; cursor:pointer; user-select:none; padding:10px;
+    }
+    .lightbox .close { top:20px; right:30px; transform:none; font-size:28px; }
+    .lightbox .prev { left:20px; }
+    .lightbox .next { right:20px; }
+
+    @media(max-width:640px){
+      .mod-header{flex-direction:column;align-items:flex-start}
+      .mod-info h1{font-size:26px}
+      .gallery-thumbs img{width:50px;height:50px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NW</div>
+        <div>
+          <div style="font-weight:700;font-size:16px">NitroWorks</div>
+          <div style="font-size:12px;color:var(--muted)">Mods de autos completos y drag setups</div>
+        </div>
+      </div>
+      <nav>
+        <a href="../NitroWorks.html">Inicio</a>
+        <a href="https://discord.gg/pdeeGJTZyD" target="_blank">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="mod-header">
+      <div class="mod-info">
+        <h1>AutoBello DragSetups EJ25</h1>
+        <p>Kit completo para drag racing: turbo grande, wheelie bar y ajustes de motor optimizados.</p>
+        <a class="cta btn-download" href="https://modsfire.com/" target="_blank">Descargar Mod</a>
+      </div>
+      <div style="width:320px">
+        <div class="thumb"><img src="ej25.png" alt="EJ25 AutoBello"></div>
+      </div>
+    </section>
+
+    <!-- GALERÍA OPTIMIZADA -->
+    <section class="mod-gallery">
+      <div class="gallery-main">
+        <img id="main-image" src="1.png" alt="AutoBello EJ25" onclick="openLightbox()">
+      </div>
+      <div class="gallery-thumbs">
+        <img src="1.png" alt="1" onclick="selectImage(0)">
+        <img src="2.png" alt="2" onclick="selectImage(1)">
+        <img src="3.png" alt="3" onclick="selectImage(2)">
+        <img src="4.png" alt="4" onclick="selectImage(3)">
+        <img src="5.png" alt="5" onclick="selectImage(4)">
+        <img src="6.png" alt="6" onclick="selectImage(5)">
+        <img src="7.png" alt="7" onclick="selectImage(6)">
+		<img src="8.png" alt="8" onclick="selectImage(6)">
+		<img src="9.png" alt="9" onclick="selectImage(6)">
+		<img src="10.png" alt="10" onclick="selectImage(6)">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Detalles del Mod</h2>
+      <div class="details">
+        <p><strong>Autor:</strong> ClinPR</p>
+        <p><strong>Versión:</strong> 1.0.0</p>
+        <p><strong>Compatibilidad:</strong> BeamNG.drive v0.37.x</p>
+        <p><strong>Descripción:</strong></p>
+        <ul>
+          <li>AutoBello EJ25</li>
+          <li>Deformation Realistic</li>
+          <li>Sound Realistic</li>
+          <li>Interior Realistic</li>
+          <li>5 Drag Configs</li>
+          <li>This mod includes a realistic ProMod wheelie bar, two drag-style spoilers (one long and one short), a drag seat, and a Haltech ECU with a custom design.</li>
+        </ul>
+      </div>
+      <div class="actions">
+        <a class="btn btn-back" href="../NitroWorks.html">Volver</a>
+        <a class="btn btn-download" href="https://modsfire.com/" target="_blank">Descargar</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© NitroWorks — Mods Drag racing para BeamNG. Comunidad y recursos no oficiales. Publica tus mods en nuestro Discord: <a href="https://discord.gg/pdeeGJTZyD" target="_blank" style="color:var(--muted)">SpookHub</a></p>
+    </footer>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="prevImage()">&#10094;</span>
+    <img id="lightbox-img" src="">
+    <span class="next" onclick="nextImage()">&#10095;</span>
+  </div>
+
+  <script>
+    const images = ['1.png','2.png','3.png','4.png','5.png','6.png','7.png','8.png','9.png','10.png'];
+    let currentIndex = 0;
+
+    function selectImage(index){
+      currentIndex = index;
+      document.getElementById('main-image').src = images[currentIndex];
+      document.querySelectorAll('.gallery-thumbs img').forEach((img,i)=> img.classList.toggle('active', i===currentIndex));
+    }
+
+    selectImage(0);
+
+    // Lightbox
+    function openLightbox(){
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = images[currentIndex];
+    }
+
+    function closeLightbox(){
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function prevImage(){
+      currentIndex = (currentIndex-1+images.length)%images.length;
+      document.getElementById('lightbox-img').src = images[currentIndex];
+      selectImage(currentIndex);
+    }
+
+    function nextImage(){
+      currentIndex = (currentIndex+1)%images.length;
+      document.getElementById('lightbox-img').src = images[currentIndex];
+      selectImage(currentIndex);
+    }
+  </script>
+</body>
+</html>
